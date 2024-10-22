@@ -36,7 +36,7 @@ pluginManagement {
 plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
     id("settings-conventions")
-    id("conventions-develocity")
+//    id("conventions-develocity")
 }
 
 dependencyResolutionManagement {
