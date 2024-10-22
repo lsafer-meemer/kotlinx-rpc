@@ -1,2 +1,5 @@
 jdk:
   - openjdk20
+install:
+  - echo "Running a custom install command"
+  - ./gradlew assemble publishToMavenLocal

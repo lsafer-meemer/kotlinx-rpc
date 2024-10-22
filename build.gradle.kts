@@ -31,6 +31,14 @@ buildscript {
 allprojects {
     apply(plugin = "org.jetbrains.kotlinx.atomicfu")
     plugins.apply("project-report")
+
+    group = "com.github.lsafer-meemer"
+    version = "ktor_3_0_0-hack"
+
+    afterEvaluate {
+        group = "com.github.lsafer-meemer"
+        version = "ktor_3_0_0-hack"
+    }
 }
 
 object Const {
