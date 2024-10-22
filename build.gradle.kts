@@ -3,7 +3,6 @@
  */
 
 import org.jetbrains.kotlin.gradle.plugin.getKotlinPluginVersion
-import util.libs
 
 plugins {
     alias(libs.plugins.serialization) apply false
@@ -31,14 +30,6 @@ buildscript {
 allprojects {
     apply(plugin = "org.jetbrains.kotlinx.atomicfu")
     plugins.apply("project-report")
-
-    group = "com.github.lsafer-meemer"
-    version = "ktor_3_0_0-hack"
-
-    afterEvaluate {
-        group = "com.github.lsafer-meemer"
-        version = "ktor_3_0_0-hack"
-    }
 }
 
 object Const {
@@ -63,8 +54,8 @@ apiValidation {
 val kotlinVersionFull: String by extra
 
 allprojects {
-    group = "org.jetbrains.kotlinx"
-    version = rootProject.libs.versions.kotlinx.rpc.get()
+    group = "com.github.lsafer-meemer"
+    version = "ktor_3_0_0-hack"
 }
 
 println("kotlinx.rpc project version: $version, Kotlin version: $kotlinVersionFull")
