@@ -9,6 +9,11 @@ plugins {
 doctor {
     enableTestCaching = false
     warnWhenNotUsingParallelGC = true
-    disallowMultipleDaemons = true
+    disallowMultipleDaemons = false
     GCFailThreshold = 0.5f
+
+    javaHome {
+        ensureJavaHomeMatches = false
+        ensureJavaHomeIsSet = false
+    }
 }
