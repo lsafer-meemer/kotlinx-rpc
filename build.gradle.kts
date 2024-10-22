@@ -19,10 +19,17 @@ plugins {
     }
 }
 
+buildscript {
+    dependencies {
+        classpath("org.jetbrains.kotlinx:atomicfu-gradle-plugin:0.26.0")
+    }
+}
+
 // useful for dependencies introspection
 // run ./gradlew htmlDependencyReport
 // Report can normally be found in build/reports/project/dependencies/index.html
 allprojects {
+    apply(plugin = "org.jetbrains.kotlinx.atomicfu")
     plugins.apply("project-report")
 }
 
